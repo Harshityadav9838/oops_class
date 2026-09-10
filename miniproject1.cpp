@@ -65,11 +65,18 @@ class bank {
     
     //creat accounts 
     void createaccount(){
-        accounts[0]=account(101,1000.50);
-        accounts[1]=account(102,2000.75);
-        accounts[2]=account(103,3000.00);
-        accounts[3]=account(104,4000.25);
-        accounts[4]=account(105,5000.50);
+        cout<<"enter the no of accounts to create :";
+        int n;
+        cin>>n;
+        for(int i=0;i<n;i++){
+            int number;
+            double amount;
+            cout<<"enter account number "<<i+1<<":";
+            cin>>number;
+            cout<<"enter initial balance :";
+            cin>>amount;
+            accounts[i]=account(number,amount);
+        }
     }
     //find accounts 
     int findaccount(int number){
